@@ -79,6 +79,7 @@ while z == True:
     if x == '3':
         print("Thanks for coming!")
         print("Have a good one!")
+        print("Bye!")
         quit()
 
 
