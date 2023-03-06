@@ -14,7 +14,7 @@ class Tzeentch:
             
             if chaos > 10:
                 print("\nTzeentch does not like your number...")
-                x = 1
+                quit()
             elif chaos <= 10:
                 print("\nTzeentch likes the smell of this number...")
                 time.sleep(2)
