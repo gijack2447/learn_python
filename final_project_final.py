@@ -1,8 +1,3 @@
-# Name: Jackie Gullette
-# Class: Intro to Programming
-# Date: 03/05/2023
-
-
 # import json and requests libraries:
 import json, requests
 
@@ -12,7 +7,7 @@ def main():
     
     # store webservice url and API key as strings to combine into URL:
     base_url = "https://api.openweathermap.org/data/2.5/weather"
-    apikey = "134a631032499d98cc8d99fcfdcacbf7"
+    apikey = " "
 
     # while loop for multiple inputs
     z = True
