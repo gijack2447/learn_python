@@ -15,7 +15,10 @@ class Tzeentch:
             if chaos > 10:
                 print("\nTzeentch does not like your number...")
                 if chaos != 40000:
-                    continue
+                    print("Ah!")
+                    x = 2
+                else:
+                    x = 2
             elif chaos <= 10:
                 print("\nTzeentch likes the smell of this number...")
                 time.sleep(2)
@@ -57,18 +60,22 @@ class Tzeentch:
                     time.sleep(1)
                     print(f"\n 'The true IP of this domain name is {val.to_text()},' says Tzeentch!")
                     quit()
+    
     def sleep(self, chaos):
       self.chaos = chaos
-      while True:
+      x = 2
+      while x == 2:
         if chaos <= 3:
 
             x = str(input("How much sleep is enough sleep?"))
             if x <=10:
                 print("You are a FOOL!")
                 time.sleep(60)
+                quit()
             if x > 10:
                 print("That's a start!")
                 time.sleep(3)
+                quit()
             if x > 1000:
                 print("\nThe Warp howls!")
                 time.sleep(3)
@@ -78,7 +85,7 @@ class Tzeentch:
                 time.sleep(1)
                 print("\nTzeentch is pleased!")
                 input()
-                quit()
+                 
         elif chaos == 7:
             if x > 40000:
                 print("\n'Death to the corpse emperor!', howls Tzeentch.")
@@ -91,22 +98,3 @@ class Tzeentch:
                 print("\nYour tomorrows and yesterdays merge into a tapestry of massive, unfolding shapes.")
                 time.sleep(2)
                 quit()
-
-def sleep():
-    x = str(input("How much sleep is enough sleep?"))
-    if x <=10:
-        print("You are a FOOL!")
-        time.sleep(60)
-    if x > 10:
-        print("That's a start!")
-        time.sleep(3)
-    if x < 1000:
-        print("\nThe Warp howls!")
-        time.sleep(3)
-        print("\nThe appearance of Tzeentch blinds you with darkness!")
-        time.sleep(10)
-        print("\nTzeentch shines in your minds eye...")
-        time.sleep(1)
-        print("\nTzeentch is pleased!")
-        input()
-
