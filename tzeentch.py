@@ -7,7 +7,7 @@ class Tzeentch:
     def __init__(self, chaos):
         self.chaos = chaos
 
-    def nslook(self, chaos):
+    def request(self, chaos):
         self.chaos = chaos
         x = 1
         while x == 1:
@@ -37,11 +37,12 @@ class Tzeentch:
                     for val in dns_site:
                         f.write(f"\n{site}: {val.to_text()}")
             
-            # Printing record
+            # Printing record with chaos
             for val in dns_site:
                 if chaos > 7:
                     print("\nAccessing The Warp...")
-                    print("\nThe tendrils of lesser demons swirl around you.")
+                    time.sleep(2)
+                    print("\nThe precense of Tzeentch confounds you.")
                     time.sleep(2)
                     print(f'Tzeencht says {val.to_text()}...')
                 elif chaos == 7:
@@ -49,9 +50,9 @@ class Tzeentch:
                     time.sleep(2)
                     print("\n...7!")
                 elif chaos < 7:
-                    print("\nDelicious number...")
+                    print("\nThe number!")
                     time.sleep(2)
-                    print("\nThe angles, the corners, the spheres...")
+                    print("\nInfinite.")
                     time.sleep(1)
                     print(f"\n 'The true IP of this domain name is {val.to_text()},' says Tzeentch!")
                     quit()
