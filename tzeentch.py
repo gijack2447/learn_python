@@ -26,7 +26,7 @@ class Tzeentch:
                 time.sleep(2)
                 x = 2
         
-        while True:
+        while x == 2:
 
             # Finding A record
             site = input("\nQuestion Tzeentch about a domain name: ")
@@ -40,6 +40,8 @@ class Tzeentch:
                     dns_site = dns.resolver.resolve(site, 'A')
                     for val in dns_site:
                         f.write(f"\n{site}: {val.to_text()}")
+                x = 3
+                        
             
             # Printing record with chaos
             for val in dns_site:
@@ -49,44 +51,49 @@ class Tzeentch:
                     print("\nThe precense of Tzeentch confounds you.")
                     time.sleep(2)
                     print(f'Tzeencht says {val.to_text()}...')
+                    
+
                 elif chaos == 7:
                     print("\n...")
                     time.sleep(2)
                     print("\n...7!")
+                    x = 3
                 elif chaos < 7:
                     print("\nThe number!")
                     time.sleep(2)
                     print("\nInfinite.")
                     time.sleep(1)
                     print(f"\n 'The true IP of this domain name is {val.to_text()},' says Tzeentch!")
-                    quit()
+                    x = 3
+       
     
     def sleep(self, chaos):
       self.chaos = chaos
-      x = 2
-      while x == 2:
+      
+      while True:
         if chaos <= 3:
 
-            x = str(input("How much sleep is enough sleep?"))
+            x = int(input("How much sleep is enough sleep?"))
             if x <=10:
                 print("You are a FOOL!")
                 time.sleep(60)
                 quit()
             if x > 10:
                 print("That's a start!")
-                time.sleep(3)
+                time.sleep(1)
                 quit()
             if x > 1000:
                 print("\nThe Warp howls!")
-                time.sleep(3)
+                time.sleep(2)
                 print("\nThe appearance of Tzeentch blinds you with darkness!")
-                time.sleep(10)
+                time.sleep(3)
                 print("\nTzeentch shines in your minds eye...")
-                time.sleep(1)
+                time.sleep(2)
                 print("\nTzeentch is pleased!")
                 input()
                  
         elif chaos == 7:
+            x = int(input("What year? "))
             if x > 40000:
                 print("\n'Death to the corpse emperor!', howls Tzeentch.")
                 print("\nThe Warp shreds your body into slivers as Tzeentch devours your soul!")
@@ -98,3 +105,4 @@ class Tzeentch:
                 print("\nYour tomorrows and yesterdays merge into a tapestry of massive, unfolding shapes.")
                 time.sleep(2)
                 quit()
+
