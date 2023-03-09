@@ -4,7 +4,7 @@ class Zfighter:
         self.home = home
         self.power = power
 
-    def list(self):
+    def chronicle(self):
         print(f"\n{self.name.title()}")
         print(f"Homeworld: {self.home.title()}")
         print(f"Power Level: {self.power}!")
