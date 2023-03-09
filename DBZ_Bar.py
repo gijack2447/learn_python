@@ -12,6 +12,6 @@ while x == 1:
     time.sleep(3)
 
     fighter = Zfighter(name, home, power)
-    fighter.list()
+    fighter.describe()
 
     x = int(input("\nPress 1 to ask again, press 2 to exit: "))
