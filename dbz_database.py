@@ -22,8 +22,8 @@ while x == 1:
 
 
     name = input("\nWhat's this guy's name? ")
-    home = input("Where's he from? ")
-    power = int(input("What's his power level? "))
+    home = input("\nWhere's he from? ")
+    power = int(input("\nWhat's his power level? "))
     print("Gotcha! Let me ask around...")
     time.sleep(3)
 
@@ -31,11 +31,3 @@ while x == 1:
     fighter.describe()
 
     x = int(input("\nPress 1 to ask again, press 2 to exit: "))
-
-
-dic = {
-    
-    'name': 'john',
-    'home': 'omaha',
-
-       }
