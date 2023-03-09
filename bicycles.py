@@ -1,13 +1,16 @@
-# Initiate a list 'bicycles'
-bicycles = []
+"""Add to a list of bicycles kept as a list in bicycles.txt"""
 
 def bicycle_list():
-        
+    
+    with open('bicycles.txt', 'a') as f:
+        data = f.read()
+        data_into_list = data.split("\n")
+      
     while True:
 
         bike = input("\nAdd a bicycle to the list, enter 'q' to quit: ")
 
-        if bike.title() in bicycles:
+        if bike.title() in data_into_list:
             print("\nThat bike already exists!")
             True
         
@@ -17,14 +20,14 @@ def bicycle_list():
         else:
             print(f"\nA new bike! A {bike.title()}!")
 
-            bicycles.append(bike.title())
+            data_into_list.append(bike.title())
 
             print("\nCurrent inventory: ")
-            for bicycle in bicycles:
+            for bicycle in data_into_list:
                 
                 print(bicycle)
 
-        f = open('bicycles.txt', 'a')
+        print(data_into_list)
         f.write(bike.title() + '\n')
             
 
