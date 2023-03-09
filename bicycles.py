@@ -7,10 +7,12 @@ def bicycle_list():
         #data_into_list = data.split("\n")
       
     while True:
-        bike_list = open("bicycles.txt", "a")
+        
+        bike_list = open("bicycles.txt", "r+")
         data = bike_list.read()
         data_into_list = data.split("\n")
-
+        print("\nCurrent inventory: ")
+        print(data)
         bike = input("\nAdd a bicycle to the list, enter 'q' to quit: ")
 
         if bike.title() in data_into_list:
@@ -22,15 +24,11 @@ def bicycle_list():
         
         else:
             print(f"\nA new bike! A {bike.title()}!")
-
-            data_into_list.append(bike.title())
-
-            print("\nCurrent inventory: ")
-            for bicycle in data_into_list:
-                
-                print(bicycle)
-
             bike_list.write(bike.title() + '\n')
+            
+
+
+            
             
 
 bicycle_list()
