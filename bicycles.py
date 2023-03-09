@@ -2,11 +2,14 @@
 
 def bicycle_list():
     
-    with open('bicycles.txt', 'a') as f:
-        data = f.read()
-        data_into_list = data.split("\n")
+    #with open('bicycles.txt', 'a') as f:
+        #data = f.read()
+        #data_into_list = data.split("\n")
       
     while True:
+        bike_list = open("bicycles.txt", "a")
+        data = bike_list.read()
+        data_into_list = data.split("\n")
 
         bike = input("\nAdd a bicycle to the list, enter 'q' to quit: ")
 
@@ -27,8 +30,7 @@ def bicycle_list():
                 
                 print(bicycle)
 
-        print(data_into_list)
-        f.write(bike.title() + '\n')
+            f.write(bike.title() + '\n')
             
 
 bicycle_list()
