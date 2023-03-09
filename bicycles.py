@@ -1,7 +1,8 @@
+# Initiate a list 'bicycles'
+bicycles = []
+
 def bicycle_list():
-    # Initiate a list 'bicycles'
-    bicycles = []
-    
+        
     while True:
 
         bike = input("\nAdd a bicycle to the list, enter 'q' to quit: ")
@@ -18,13 +19,13 @@ def bicycle_list():
 
             bicycles.append(bike.title())
 
+            print("\nCurrent inventory: ")
             for bicycle in bicycles:
-                print("\nCurrent inventory: ")
+                
                 print(bicycle)
 
-        with open('bicycles.txt', 'a') as f:
-            f.write(bike.title().rstrip())
-            True
+        f = open('bicycles.txt', 'a')
+        f.write(bike.title() + '\n')
             
 
 bicycle_list()
