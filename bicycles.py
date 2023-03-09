@@ -30,7 +30,7 @@ def bicycle_list():
                 
                 print(bicycle)
 
-            f.write(bike.title() + '\n')
+            bike_list.write(bike.title() + '\n')
             
 
 bicycle_list()
