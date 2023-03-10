@@ -29,13 +29,31 @@ def bicycle_list():
             data_into_list.append(bike.title())
             bike_list.write(bike.title() + '\n')
             
+def remembrancer():
 
+    sons_list = open('text_files/20_primarchs.txt', 'r+')
+    data = sons_list.read()
+    data_list = data.split('\n')
+    while True:
+        primc = input("Name a Primarch: ")
+        if primc.title() in data_list:
+            print("Got it...")
+        if primc == 'q':
+            quit()
+        else:
+            f = f"primc + '\n'"
+            data_list.append(f)
+            sons_list.write(f)
+        
+
+
+    # print(data_list)
+    # open text file 
 
             
             
 
-bicycle_list()
-
+remembrancer()
 
 # Access the last elements in a list with [-1], or further (ex: [-2])
                         
