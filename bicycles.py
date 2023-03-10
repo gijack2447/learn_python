@@ -13,17 +13,20 @@ def bicycle_list():
         data_into_list = data.split("\n")
         print("\nCurrent inventory: ")
         print(data)
-        bike = input("\nAdd a bicycle to the list, enter 'q' to quit: ")
+
+        bike = input("\nAdd a bicycle to the list, 'p' to print list, or 'q' to quit: ")
 
         if bike.title() in data_into_list:
             print("\nThat bike already exists!")
             True
-        
+        elif bike == 'p':
+            print(data_into_list)
         elif bike == 'q':
             quit()
         
         else:
             print(f"\nA new bike! A {bike.title()}!")
+            data_into_list.append(bike.title())
             bike_list.write(bike.title() + '\n')
             
 
