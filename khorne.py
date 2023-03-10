@@ -1,8 +1,19 @@
 """Khorne"""
 
-ip_list = []
-len(ip_list)
+capitals = {
+            "USA":"Washington DC",
+            "India":"New Delhi",
+            
+            }
 
-for ip in range(1,256):
-    ip_list.append("192.168.1." + str(ip))
-ip_list[0]
+print(capitals.get("USA"))
+
+capitals.update({"India":"Kandahar"})
+
+keys = capitals.keys()
+for key in capitals.keys():
+    print(key)
+
+
+
+
