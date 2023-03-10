@@ -2,10 +2,12 @@
 # Class: Intro to Programming
 # Date: 03/04/2023
 # import json and requests libraries:
-import json, requests
+import json
+import requests
 # store webservice url and API key as strings to combine into URL:
 base_url = "https://api.openweathermap.org/data/2.5/weather"
 apikey = "134a631032499d98cc8d99fcfdcacbf7"
+
 def main():
  
     """Main function to accept input and return weather data"""
