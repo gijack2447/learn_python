@@ -13,7 +13,7 @@ class Text_to:
     def vibe_check(self, name, power):
         self.name = name
         self.power = power
-        
+        khorne = open('text_files/list_of_Khorne.txt', 'a')
         
 
         if power < 1000000:
@@ -24,20 +24,19 @@ class Text_to:
             print("\nAhahahahahahhahhahaaaaaa!")
             time.sleep(2)
             print("\nVery well then...")
-        if power >= 1000000:
+            
+            khorne.write(f"The library of Khorne cares not for the {random.choice(scrawnies)} {name.title()}!\n")
+        
+        elif power >= 1000000:
             print(f"{name.title()}!")
             time.sleep(2)
             print(f"{name.title()} the {random.choice(bigs).title()}! ")
             time.sleep(4)
-            print(f"\nThe demons of Khorne {random.choice(bigs)} {name.title()}? The angels rejoice about how {random.choice(bigs)} you are!\n")
-        
-        khorne = open('text_files/list_of_Khorne', 'r+')
-        if power >= 1000000:
+            print(f"\nThe demons of Khorne, {random.choice(bigs)} {name.title()}! They rejoice about how {random.choice(bigs)} you are!\n")
+            
             khorne.write(f"\n{name.title()} the {random.choice(bigs).title()}")
-            khorne.write(f"The library of Khorne recognizes the {random.choice(bigs)} of {name.title()}!\n")
-
-        if power < 1000000:
-            khorne.write(f"\nThe library of Khorne cares not for the {random.choice(scrawnies)} {name.title()}!\n")
+            khorne.write(f"\nThe library of Khorne recognizes the {random.choice(bigs)} {name.title()}!\n")
+                   
 
     
 
