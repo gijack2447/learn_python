@@ -10,7 +10,7 @@ apiKey = 'KfO5HEevBmYG2rrA6Jd4S4XjaQx4GRODy9BMQi2p'
 
 def fetchAPOD():
   URL_APOD = "https://api.nasa.gov/planetary/apod"
-  date = '2023-07-22'
+  date = '2023-07-27'
   params = {
       'api_key':apiKey,
       'date':date,
