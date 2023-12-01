@@ -1,10 +1,11 @@
 class Vehicle:
     """Vehicle parent class"""
+# Define initial function
     def __init__ (self, make, model):
         self.make = make
         self.model = model
 
-# Method to set the vehicle make        
+# Method to set the vehicle make, inherited        
     def setmake(self, make):
         self.make = make
 # Method to set vehicle model        
@@ -21,6 +22,7 @@ class Vehicle:
         vmake = f"{self.make}"
         print(f"Make: {vmake.title()}")
         
+# inheret objects from Vehicle class into Car class
 class Car(Vehicle):
     """Car child class"""
     def __init__(self, make, model, doors):
