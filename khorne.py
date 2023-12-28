@@ -1,5 +1,4 @@
-"""Khorne"""
-
+"""Khorne's chamber"""
 capitals = {
             "USA":"Washington DC",
             "India":"New Delhi",
@@ -13,7 +12,6 @@ capitals.update({"India":"Kandahar"})
 keys = capitals.keys()
 for key in capitals.keys():
     print(key)
-
 
 
 
