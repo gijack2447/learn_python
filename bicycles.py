@@ -15,7 +15,7 @@ def bicycle_list():
         print(data)
 
         bike = input("\nAdd a bicycle to the list, 'p' to print list, or 'q' to quit: ")
-
+    # Omit content that already exists in list
         if bike.title() in data_into_list:
             print("\nThat bike already exists!")
             True
