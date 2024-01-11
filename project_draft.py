@@ -44,7 +44,7 @@ def main():
             
             temp = json_data['main']['temp']
             
-            print(f"The current temperature in {city.title()} is: {temp})            } is: {temp}")
+            print(f"The current temperature in {city.title()} is: {temp})             is: {temp}")
             
             # max_temp variable stores maximum temperature from 'main', prints info:
             
