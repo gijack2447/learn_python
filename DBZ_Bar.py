@@ -1,3 +1,4 @@
+# import class from file
 from dbz_database import Zfighter
 import time
 
